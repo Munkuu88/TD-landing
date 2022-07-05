@@ -53,7 +53,7 @@ export default function Footer() {
             © 2022 Tomujin Digital LLC{" "}
           </Text>
           <HStack mb={["15px", "0"]}>
-            <a href="" target={"_blank"}>
+            <a href="https://www.facebook.com/tomujindigital" target={"_blank"}>
               <Icon as={FaFacebook} boxSize={"25px"} />
             </a>
           </HStack>

@@ -70,23 +70,28 @@ export default function Header() {
           <HStack spacing={"20px"} fontSize={"sm"} fontWeight={"bold"}>
             {Sections.map((el) => {
               return (
-                <a href={`#${el.link}`}>
+                <a href={`#${el.link}`} key={el.link}>
                   <Text cursor={"pointer"}>{el.text}</Text>
                 </a>
               );
             })}
-            <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Text
-                px="10px"
-                py="5px"
-                borderRadius={"10px"}
-                bg="white"
-                cursor={"pointer"}
-                boxShadow="rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"
+            <a href="https://www.facebook.com/tomujindigital" target={"_blank"}>
+              <MotionBox
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Contact Us
-              </Text>
-            </MotionBox>
+                <Text
+                  px="10px"
+                  py="5px"
+                  borderRadius={"10px"}
+                  bg="white"
+                  cursor={"pointer"}
+                  boxShadow="rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"
+                >
+                  Contact Us
+                </Text>
+              </MotionBox>
+            </a>
           </HStack>
         </Flex>
       </Flex>

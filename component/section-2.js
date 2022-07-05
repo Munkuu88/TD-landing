@@ -50,14 +50,10 @@ export default function SectionTwo() {
               key={el.desc}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              borderRadius={"10px"}
+              boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
             >
-              <VStack
-                w="100%"
-                textAlign={"center"}
-                px="10px"
-                borderRadius={"10px"}
-                boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
-              >
+              <VStack w="100%" textAlign={"center"} px="10px">
                 <Image src={el.image} w="20%" />
                 <Text fontWeight={"semibold"} fontSize={["sm", "xl"]}>
                   {el.title}

@@ -5,22 +5,36 @@ import SectionThree from "../component/section-3";
 import SectionFour from "../component/section-4";
 import SectionSix from "../component/section-6";
 import SectionSeven from "../component/section-7";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <>
       <Box id="1" />
-      <SectionOne />
-      <SectionTwo />
+      <Flex w={["95%", "95%", "90%", "70%", "70%"]}>
+        <SectionOne />
+      </Flex>
+      <Flex justifyContent={"center"} w="100%">
+        <Flex w={["95%", "95%", "90%", "70%", "70%"]}>
+          <SectionTwo />
+        </Flex>
+      </Flex>
       <Box id="2" />
-      <SectionThree />
+      <Box w={["95%", "95%", "90%", "70%", "70%"]}>
+        <SectionThree />
+      </Box>
       <Box id="3" />
-      <SectionFour />
+      <Box w={["95%", "95%", "90%", "70%", "70%"]}>
+        <SectionFour />
+      </Box>
       {/* <SectionFive /> */}
       <Box id="4" />
-      <SectionSix />
-      <SectionSeven />
+      <Box w={["95%", "95%", "90%", "70%", "70%"]}>
+        <SectionSix />
+      </Box>
+      <Box w={["95%", "95%", "90%", "70%", "70%"]}>
+        <SectionSeven />
+      </Box>
     </>
   );
 }

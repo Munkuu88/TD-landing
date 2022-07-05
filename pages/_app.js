@@ -27,11 +27,9 @@ function MyApp({ Component, pageProps }) {
           <Header />
           <Flex justifyContent={"center"}>
             <VStack
-              w={["95%", "95%", "90%", "70%", "70%"]}
-              maxW="1300px"
-              alignItems={"unset"}
-              spacing={["80px", "200px"]}
-              pb={["40px", "80px"]}
+              alignItems={"center"}
+              spacing={["80px", "100px"]}
+              pb={["40px", "40px"]}
             >
               <Component {...pageProps} />
             </VStack>
