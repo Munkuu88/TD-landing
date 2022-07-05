@@ -46,9 +46,10 @@ export default function SectionFive() {
     <Box h="40vh">
       <Text
         fontWeight={"semibold"}
-        fontSize={"xl"}
+        pb={["20px", "50px"]}
         w="100%"
         textAlign={"center"}
+        fontSize={["xl", "3xl"]}
       >
         Title
       </Text>

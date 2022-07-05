@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
               w={["95%", "95%", "90%", "70%", "70%"]}
               maxW="1300px"
               alignItems={"unset"}
-              spacing={["80px", "160px"]}
+              spacing={["80px", "200px"]}
             >
               <Component {...pageProps} />
             </VStack>

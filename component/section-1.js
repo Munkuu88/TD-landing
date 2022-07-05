@@ -7,7 +7,11 @@ export default function SectionOne() {
   return (
     <Flex display={["block", "block", "block", "flex", "flex"]}>
       <VStack alignItems={"unset"} w={["100%", "100%", "100%", "50%", "50%"]}>
-        <Text fontSize={"3xl"} fontWeight={"bold"}>
+        <Text
+          fontSize={["xl", "3xl"]}
+          fontWeight={"bold"}
+          pb={["20px", "50px"]}
+        >
           {Section1[language].title}
         </Text>
         <Text fontSize={"xl"}>{Section1[language].desc}</Text>

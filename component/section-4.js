@@ -23,7 +23,11 @@ export default function SectionFour() {
 
   return (
     <VStack w={"100%"} spacing={"50px"}>
-      <Text fontSize={"4xl"} fontWeight={"semibold"}>
+      <Text
+        fontSize={["xl", "3xl"]}
+        pb={["20px", "50px"]}
+        fontWeight={"semibold"}
+      >
         {Section4[language].titlePart}
       </Text>
       <SimpleGrid columns={[1, 3]} w="100%" gap={[2, 2, 4, 4, 8]}>

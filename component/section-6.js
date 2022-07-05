@@ -7,23 +7,31 @@ export default function SectionSix() {
   console.log(Section6[language].cntct);
   return (
     <VStack w="100%">
-      <Text fontSize={"4xl"} fontWeight={"semibold"}>
+      <Text
+        fontSize={["xl", "3xl"]}
+        pb={["20px", "50px"]}
+        fontWeight={"semibold"}
+      >
         {Section6[language].titlePart}
       </Text>
       <AspectRatio ratio={[2 / 4, 4 / 2]} w="100%">
         <Flex flexDir={["column", "column", "column", "row", "row"]} w="100%">
           <Box w={["100%", "100%", "100%", "50%", "50%"]} bg="black" h="100%" />
-          <Flex
+          <VStack
+            spacing={["20px", "30px"]}
+            pl={["0px", "40px"]}
             w={["100%", "100%", "100%", "50%", "50%"]}
             h="100%"
             alignItems={"center"}
             justifyContent="center"
             flexDir={"column"}
           >
-            <Text>{Section6[language].title}</Text>
+            <Text fontSize={"xl"} fontWeight={"bold"}>
+              {Section6[language].title}
+            </Text>
             <Text>{Section6[language].desc}</Text>
             <Button>{Section6[language].cntct}</Button>
-          </Flex>
+          </VStack>
         </Flex>
       </AspectRatio>
     </VStack>

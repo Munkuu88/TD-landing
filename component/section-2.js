@@ -31,7 +31,11 @@ export default function SectionTwo() {
 
   return (
     <VStack w={"100%"} spacing={"50px"}>
-      <Text fontSize={"4xl"} fontWeight={"semibold"}>
+      <Text
+        fontSize={["2xl", "3xl"]}
+        fontWeight={"semibold"}
+        pb={["20px", "50px"]}
+      >
         {Section2[language].titlePart}
       </Text>
       <SimpleGrid columns={[2, 2, 3, 4, 4]} w="100%" gap={[2, 2, 6, 6, 8]}>
