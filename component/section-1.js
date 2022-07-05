@@ -8,6 +8,8 @@ export default function SectionOne() {
     <Flex display={["block", "block", "block", "flex", "flex"]}>
       <VStack alignItems={"unset"} w={["100%", "100%", "100%", "50%", "50%"]}>
         <Text
+          id="1"
+          as="section"
           fontSize={["xl", "3xl"]}
           fontWeight={"bold"}
           pb={["20px", "50px"]}

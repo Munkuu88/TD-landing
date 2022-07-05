@@ -21,11 +21,10 @@ import { useLanguage } from "../context/language";
 import { languages } from "../context/language";
 
 const Sections = [
-  { text: "1", link: "" },
-  { text: "2", link: "" },
-  { text: "3", link: "" },
-  { text: "4", link: "" },
-  { text: "5", link: "" },
+  { text: "1", link: "1" },
+  { text: "2", link: "2" },
+  { text: "3", link: "3" },
+  { text: "4", link: "4" },
 ];
 
 export default function Header() {
@@ -71,9 +70,9 @@ export default function Header() {
           <HStack spacing={"20px"} fontSize={"sm"} fontWeight={"bold"}>
             {Sections.map((el) => {
               return (
-                <Text cursor={"pointer"} key={el.text}>
-                  {el.text}
-                </Text>
+                <a href={`#${el.link}`}>
+                  <Text cursor={"pointer"}>{el.text}</Text>
+                </a>
               );
             })}
             <MotionBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

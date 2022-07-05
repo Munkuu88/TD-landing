@@ -25,12 +25,13 @@ function MyApp({ Component, pageProps }) {
         <LanguageContextProvider>
           <Box w="100% " h={["55px", "71px"]} />
           <Header />
-          <Flex justifyContent={"center"} py={["40px", "80px"]}>
+          <Flex justifyContent={"center"}>
             <VStack
               w={["95%", "95%", "90%", "70%", "70%"]}
               maxW="1300px"
               alignItems={"unset"}
               spacing={["80px", "200px"]}
+              pb={["40px", "80px"]}
             >
               <Component {...pageProps} />
             </VStack>
