@@ -16,7 +16,7 @@ export default function SectionFour() {
       <Text fontSize={"4xl"} fontWeight={"semibold"}>
         Section 1
       </Text>
-      <SimpleGrid columns={[1, 4]} w="100%" gap={8}>
+      <SimpleGrid columns={[1, 4]} w="100%" gap={[2, 2, 4, 4, 8]}>
         {Items.map((el) => {
           return (
             <MotionAspect

@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Header from "../component/header";
+import Footer from "../component/footer";
 import { ChakraProvider, Box, VStack, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 
@@ -20,18 +21,19 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ChakraProvider>
-        <Box w="100% " h="71px" />
+        <Box w="100% " h={["55px", "71px"]} />
         <Header />
         <Flex justifyContent={"center"} py="80px">
           <VStack
             w={["95%", "95%", "90%", "70%", "70%"]}
-            maxW="1200px"
+            maxW="1300px"
             alignItems={"unset"}
             spacing={"160px"}
           >
             <Component {...pageProps} />
           </VStack>
         </Flex>
+        <Footer />
       </ChakraProvider>
     </>
   );
