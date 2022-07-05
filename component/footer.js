@@ -48,6 +48,7 @@ export default function Footer() {
             h="30px"
             src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
           />
+
           <Text mb={["15px", "0"]} color={"gray"} fontSize="sm">
             © 2022 Tomujin Digital LLC{" "}
           </Text>

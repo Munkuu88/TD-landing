@@ -16,7 +16,12 @@ export default function SectionOne() {
         </Text>
         <Text fontSize={"xl"}>{Section1[language].desc}</Text>
       </VStack>
-      <Image w={["100%", "100%", "100%", "50%", "50%"]} pl={"40px"} />
+      <Image
+        w={["100%", "100%", "100%", "50%", "50%"]}
+        pt={["40px", "0px"]}
+        src="https://media.discordapp.net/attachments/910331361179619370/993820629822361670/1.png"
+        pl={["0px", "40px"]}
+      />
     </Flex>
   );
 }

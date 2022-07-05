@@ -7,7 +7,11 @@ export default function SectionThree() {
 
   return (
     <Flex display={["block", "block", "block", "flex", "flex"]}>
-      <Image w={["100%", "100%", "100%", "50%", "50%"]} />
+      <Image
+        w={["100%", "100%", "100%", "50%", "50%"]}
+        pb={["40px", "0px"]}
+        src="https://media.discordapp.net/attachments/910331361179619370/993820631122575390/6.png?width=1714&height=1403"
+      />
       <VStack
         alignItems={"unset"}
         w={["100%", "100%", "100%", "50%", "50%"]}

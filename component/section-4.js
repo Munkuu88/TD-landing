@@ -1,4 +1,4 @@
-import { SimpleGrid, VStack, Text, Icon, AspectRatio } from "@chakra-ui/react";
+import { SimpleGrid, VStack, Text, Image, AspectRatio } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/language";
 import { Section4 } from "../texts/section-4";
@@ -9,15 +9,18 @@ export default function SectionFour() {
   const Items = [
     {
       title: Section4[language].title1,
-      image: "",
+      image:
+        "https://cdn.discordapp.com/attachments/910331361179619370/993820631344877608/Asset_5150x.png",
     },
     {
       title: Section4[language].title2,
-      image: "",
+      image:
+        "https://media.discordapp.net/attachments/910331361179619370/993820631554601020/elfc_logo_gradient.png",
     },
     {
       title: Section4[language].title3,
-      image: "",
+      image:
+        "https://media.discordapp.net/attachments/910331361179619370/993822820444422164/12.png?width=1294&height=1404",
     },
   ];
 
@@ -45,7 +48,7 @@ export default function SectionFour() {
                 borderRadius={"10px"}
                 boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}
               >
-                <Icon as={el.icon} />
+                <Image src={el.image} w="40%" />
                 <Text fontWeight={"semibold"} fontSize={"xl"}>
                   {el.title}
                 </Text>

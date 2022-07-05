@@ -1,4 +1,4 @@
-import { SimpleGrid, Text, VStack, Icon, AspectRatio } from "@chakra-ui/react";
+import { SimpleGrid, Text, VStack, Image, AspectRatio } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/language";
 import { Section2 } from "../texts/section-2";
@@ -10,22 +10,26 @@ export default function SectionTwo() {
     {
       title: Section2[language].title1,
       desc: Section2[language].desc1,
-      icon: "",
+      image:
+        "https://cdn.discordapp.com/attachments/910331361179619370/993820630124343326/2.png",
     },
     {
       title: Section2[language].title2,
       desc: Section2[language].desc2,
-      icon: "",
+      image:
+        "https://cdn.discordapp.com/attachments/910331361179619370/993820630375989298/3.png",
     },
     {
       title: Section2[language].title3,
       desc: Section2[language].desc3,
-      icon: "",
+      image:
+        "https://media.discordapp.net/attachments/910331361179619370/993820630682177556/4.png",
     },
     {
       title: Section2[language].title4,
       desc: Section2[language].desc4,
-      icon: "",
+      image:
+        "https://cdn.discordapp.com/attachments/910331361179619370/993820630912872499/5.png",
     },
   ];
 
@@ -38,7 +42,7 @@ export default function SectionTwo() {
       >
         {Section2[language].titlePart}
       </Text>
-      <SimpleGrid columns={[2, 2, 3, 4, 4]} w="100%" gap={[2, 2, 6, 6, 8]}>
+      <SimpleGrid columns={[2, 2, 3, 4, 4]} w="100%" gap={[4, 4, 6, 6, 8]}>
         {Items.map((el) => {
           return (
             <MotionAspect
@@ -54,11 +58,11 @@ export default function SectionTwo() {
                 borderRadius={"10px"}
                 boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
               >
-                <Icon as={el.icon} />
-                <Text fontWeight={"semibold"} fontSize={"xl"}>
+                <Image src={el.image} w="20%" />
+                <Text fontWeight={"semibold"} fontSize={["sm", "xl"]}>
                   {el.title}
                 </Text>
-                <Text>{el.desc}</Text>
+                <Text fontSize={["xs", "sm"]}>{el.desc}</Text>
               </VStack>
             </MotionAspect>
           );
