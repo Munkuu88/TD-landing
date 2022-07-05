@@ -39,7 +39,7 @@ export default function Footer() {
         <Flex
           justifyContent={["none", "space-between"]}
           alignItems={["center", "none"]}
-          flexDir={["column", "rowS"]}
+          flexDir={["column", "row"]}
         >
           <Image
             mb={["15px", "0"]}

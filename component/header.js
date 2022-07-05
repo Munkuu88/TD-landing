@@ -1,6 +1,8 @@
 import { Box, Flex, HStack, Image, Text, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
+import { useLanguage } from "../context/language";
+import { languages } from "../context/language";
 
 const Sections = [
   { text: "1", link: "" },
@@ -12,6 +14,10 @@ const Sections = [
 
 export default function Header() {
   const MotionBox = motion(Box);
+  const toggleTheme = () => {
+    setLanguage(language === languages.mn ? languages.en : languages.mn);
+  };
+  const { language, setLanguage } = useLanguage();
 
   return (
     <>
