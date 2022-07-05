@@ -1,4 +1,20 @@
-import { Box, Flex, HStack, Image, Text, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Image,
+  Text,
+  Icon,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { useLanguage } from "../context/language";
@@ -18,6 +34,7 @@ export default function Header() {
     setLanguage(language === languages.mn ? languages.en : languages.mn);
   };
   const { language, setLanguage } = useLanguage();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -98,9 +115,30 @@ export default function Header() {
             h="25px"
             src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
           />
-          <Icon as={FiMenu} boxSize="30px" />
+          <Icon as={FiMenu} boxSize="30px" onClick={onOpen} />
+          <DrawerMenu isOpen={isOpen} onClose={onClose} />
         </Flex>
       </Flex>
     </>
   );
 }
+
+const DrawerMenu = ({ isOpen, onClose }) => {
+  return (
+    <Drawer isOpen={isOpen} size={"full"} onClose={onClose}>
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerHeader>Tomujin Digital</DrawerHeader>
+
+        <DrawerBody></DrawerBody>
+
+        <DrawerFooter>
+          <Button variant="outline" mr={3} onClick={onClose}>
+            Cancel
+          </Button>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+  );
+};

@@ -8,6 +8,7 @@ import {
   Box,
   Icon,
 } from "@chakra-ui/react";
+import { FaFacebook } from "react-icons/fa";
 
 const Items = [
   { title: "12", items: [{ text: "1", link: "" }] },
@@ -51,7 +52,9 @@ export default function Footer() {
             © 2022 Tomujin Digital LLC{" "}
           </Text>
           <HStack mb={["15px", "0"]}>
-            <Icon />
+            <a href="" target={"_blank"}>
+              <Icon as={FaFacebook} boxSize={"25px"} />
+            </a>
           </HStack>
         </Flex>
       </VStack>

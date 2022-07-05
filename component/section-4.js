@@ -35,7 +35,7 @@ export default function SectionFour() {
           return (
             <MotionAspect
               ratio={1}
-              key={el.desc}
+              key={el.title}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               pos="relative"
