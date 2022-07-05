@@ -24,7 +24,7 @@ export default function SectionSeven() {
         email: email,
       })
       .then((res) => {
-        console.log(res);
+        setEmail("");
         setIsLoading(false);
         toast({
           title: res.data.message,
@@ -34,7 +34,7 @@ export default function SectionSeven() {
         });
       })
       .catch((err) => {
-        console.log(err);
+        setEmail("");
         setIsLoading(false);
         toast({
           title: "Амжилтгүй боллоо.",
@@ -61,6 +61,7 @@ export default function SectionSeven() {
           mb={["15px", "0px"]}
           placeholder={Section7[language].enter}
           w={["300px", "400px"]}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Button isLoading={isLoading} onClick={Handler} w={["100%", "unset"]}>
