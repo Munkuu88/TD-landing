@@ -14,6 +14,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Button,
+  VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
@@ -120,14 +121,14 @@ export default function Header() {
             src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
           />
           <Icon as={FiMenu} boxSize="30px" onClick={onOpen} />
-          <DrawerMenu isOpen={isOpen} onClose={onClose} />
+          <DrawerMenu isOpen={isOpen} onClose={onClose} Sections={Sections} />
         </Flex>
       </Flex>
     </>
   );
 }
 
-const DrawerMenu = ({ isOpen, onClose }) => {
+const DrawerMenu = ({ isOpen, onClose, Sections }) => {
   return (
     <Drawer isOpen={isOpen} size={"full"} onClose={onClose}>
       <DrawerOverlay />
@@ -135,7 +136,17 @@ const DrawerMenu = ({ isOpen, onClose }) => {
         <DrawerCloseButton />
         <DrawerHeader>Tomujin Digital</DrawerHeader>
 
-        <DrawerBody></DrawerBody>
+        <DrawerBody>
+          <VStack alignItems={"unset"} spacing={"20px"}>
+            {Sections.map((el) => {
+              return (
+                <a href={`#${el.text}`}>
+                  <Text onClick={onClose}>{el.text}</Text>
+                </a>
+              );
+            })}
+          </VStack>
+        </DrawerBody>
 
         <DrawerFooter>
           <Button variant="outline" mr={3} onClick={onClose}>
