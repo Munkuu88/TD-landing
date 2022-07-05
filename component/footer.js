@@ -31,21 +31,26 @@ export default function Footer() {
   return (
     <Flex justifyContent={"center"} py="50px" borderTop={"1px solid #dbdbdb"}>
       <VStack w="70%" maxW="1300px" alignItems={"unset"}>
-        <SimpleGrid columns={4} pb="50px">
+        <SimpleGrid columns={[2, 4]} pb="50px">
           {Items.map((el) => {
             return <Item key={el.title} data={el} />;
           })}
         </SimpleGrid>
-        <Flex justifyContent={"space-between"}>
+        <Flex
+          justifyContent={["none", "space-between"]}
+          alignItems={["center", "none"]}
+          flexDir={["column", "rowS"]}
+        >
           <Image
+            mb={["15px", "0"]}
             cursor={"pointer"}
             h="30px"
             src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
           />
-          <Text color={"gray"} fontSize="sm">
+          <Text mb={["15px", "0"]} color={"gray"} fontSize="sm">
             © 2022 Tomujin Digital LLC{" "}
           </Text>
-          <HStack>
+          <HStack mb={["15px", "0"]}>
             <Icon />
           </HStack>
         </Flex>

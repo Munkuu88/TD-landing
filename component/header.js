@@ -1,5 +1,6 @@
-import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Text, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { FiMenu } from "react-icons/fi";
 
 const Sections = [
   { text: "1", link: "" },
@@ -90,6 +91,7 @@ export default function Header() {
             h="25px"
             src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
           />
+          <Icon as={FiMenu} boxSize="30px" />
         </Flex>
       </Flex>
     </>

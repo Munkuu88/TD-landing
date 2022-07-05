@@ -23,12 +23,12 @@ function MyApp({ Component, pageProps }) {
       <ChakraProvider>
         <Box w="100% " h={["55px", "71px"]} />
         <Header />
-        <Flex justifyContent={"center"} py="80px">
+        <Flex justifyContent={"center"} py={["40px", "80px"]}>
           <VStack
             w={["95%", "95%", "90%", "70%", "70%"]}
             maxW="1300px"
             alignItems={"unset"}
-            spacing={"160px"}
+            spacing={["80px", "160px"]}
           >
             <Component {...pageProps} />
           </VStack>
