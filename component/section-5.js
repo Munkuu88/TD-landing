@@ -20,11 +20,20 @@ export default function SectionFive() {
     speed: 500,
     dots: true,
     arrows: true,
+    autoplay: true,
+    speed: 2000,
   };
 
   return (
     <Box h="40vh">
-      <Text></Text>
+      <Text
+        fontWeight={"semibold"}
+        fontSize={"xl"}
+        w="100%"
+        textAlign={"center"}
+      >
+        Title
+      </Text>
       <Slider {...settings}>
         {Items.map((el) => {
           return (
