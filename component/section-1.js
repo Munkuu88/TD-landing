@@ -1,18 +1,16 @@
-import { Box, Flex, Text, VStack, Image } from "@chakra-ui/react";
+import { Flex, Text, VStack, Image } from "@chakra-ui/react";
+import { useLanguage } from "../context/language";
+import { Section1 } from "../texts/section-1";
 
 export default function SectionOne() {
+  const { language, setLanguage } = useLanguage();
   return (
     <Flex display={["block", "block", "block", "flex", "flex"]}>
       <VStack alignItems={"unset"} w={["100%", "100%", "100%", "50%", "50%"]}>
         <Text fontSize={"3xl"} fontWeight={"bold"}>
-          Title is here
+          {Section1[language].title}
         </Text>
-        <Text fontSize={"lg"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          ultricies erat dignissim, faucibus lorem et, feugiat justo. Fusce at
-          luctus urna, sed fringilla ligula. Pellentesque elit ipsum, ornare sit
-          amet porttitor ac, ultricies eget libero.
-        </Text>
+        <Text fontSize={"xl"}>{Section1[language].desc}</Text>
       </VStack>
       <Image w={["100%", "100%", "100%", "50%", "50%"]} pl={"40px"} />
     </Flex>

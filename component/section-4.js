@@ -1,22 +1,32 @@
 import { SimpleGrid, VStack, Text, Icon, AspectRatio } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
-const Items = [
-  { title: "Title 1", desc: "desc 1", icon: "" },
-  { title: "Title 2", desc: "desc 2", icon: "" },
-  { title: "Title 3", desc: "desc 3", icon: "" },
-  { title: "Title 4", desc: "desc 4", icon: "" },
-];
+import { useLanguage } from "../context/language";
+import { Section4 } from "../texts/section-4";
 
 export default function SectionFour() {
   const MotionAspect = motion(AspectRatio);
+  const { language, setlanguage } = useLanguage();
+  const Items = [
+    {
+      title: Section4[language].title1,
+      image: "",
+    },
+    {
+      title: Section4[language].title2,
+      image: "",
+    },
+    {
+      title: Section4[language].title3,
+      image: "",
+    },
+  ];
 
   return (
     <VStack w={"100%"} spacing={"50px"}>
       <Text fontSize={"4xl"} fontWeight={"semibold"}>
-        Section 1
+        {Section4[language].titlePart}
       </Text>
-      <SimpleGrid columns={[1, 4]} w="100%" gap={[2, 2, 4, 4, 8]}>
+      <SimpleGrid columns={[1, 3]} w="100%" gap={[2, 2, 4, 4, 8]}>
         {Items.map((el) => {
           return (
             <MotionAspect
@@ -24,6 +34,7 @@ export default function SectionFour() {
               key={el.desc}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              pos="relative"
             >
               <VStack
                 w="100%"
@@ -35,6 +46,15 @@ export default function SectionFour() {
                   {el.title}
                 </Text>
                 <Text>{el.desc}</Text>
+                <Text
+                  pos={"absolute"}
+                  bottom={"10"}
+                  right={"10"}
+                  cursor={"pointer"}
+                  textDecoration={"underline"}
+                >
+                  Read more
+                </Text>
               </VStack>
             </MotionAspect>
           );

@@ -3,6 +3,7 @@ import Header from "../component/header";
 import Footer from "../component/footer";
 import { ChakraProvider, Box, VStack, Flex } from "@chakra-ui/react";
 import Head from "next/head";
+import { LanguageContextProvider } from "../context/language";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -21,19 +22,21 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ChakraProvider>
-        <Box w="100% " h={["55px", "71px"]} />
-        <Header />
-        <Flex justifyContent={"center"} py={["40px", "80px"]}>
-          <VStack
-            w={["95%", "95%", "90%", "70%", "70%"]}
-            maxW="1300px"
-            alignItems={"unset"}
-            spacing={["80px", "160px"]}
-          >
-            <Component {...pageProps} />
-          </VStack>
-        </Flex>
-        <Footer />
+        <LanguageContextProvider>
+          <Box w="100% " h={["55px", "71px"]} />
+          <Header />
+          <Flex justifyContent={"center"} py={["40px", "80px"]}>
+            <VStack
+              w={["95%", "95%", "90%", "70%", "70%"]}
+              maxW="1300px"
+              alignItems={"unset"}
+              spacing={["80px", "160px"]}
+            >
+              <Component {...pageProps} />
+            </VStack>
+          </Flex>
+          <Footer />
+        </LanguageContextProvider>
       </ChakraProvider>
     </>
   );

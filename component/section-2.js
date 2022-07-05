@@ -1,24 +1,40 @@
 import { SimpleGrid, Text, VStack, Icon, AspectRatio } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import {} from "react-icons";
-
-const Items = [
-  { title: "Title 1", desc: "desc 1", icon: "" },
-  { title: "Title 2", desc: "desc 2", icon: "" },
-  { title: "Title 3", desc: "desc 3", icon: "" },
-  { title: "Title 4", desc: "desc 4", icon: "" },
-  { title: "Title 5", desc: "desc 5", icon: "" },
-];
+import { useLanguage } from "../context/language";
+import { Section2 } from "../texts/section-2";
 
 export default function SectionTwo() {
   const MotionAspect = motion(AspectRatio);
+  const { language, setLanguage } = useLanguage();
+  const Items = [
+    {
+      title: Section2[language].title1,
+      desc: Section2[language].desc1,
+      icon: "",
+    },
+    {
+      title: Section2[language].title2,
+      desc: Section2[language].desc2,
+      icon: "",
+    },
+    {
+      title: Section2[language].title3,
+      desc: Section2[language].desc3,
+      icon: "",
+    },
+    {
+      title: Section2[language].title4,
+      desc: Section2[language].desc4,
+      icon: "",
+    },
+  ];
 
   return (
     <VStack w={"100%"} spacing={"50px"}>
       <Text fontSize={"4xl"} fontWeight={"semibold"}>
-        Section 1
+        {Section2[language].titlePart}
       </Text>
-      <SimpleGrid columns={[2, 2, 3, 5, 5]} w="100%" gap={[2, 2, 6, 6, 8]}>
+      <SimpleGrid columns={[2, 2, 3, 4, 4]} w="100%" gap={[2, 2, 6, 6, 8]}>
         {Items.map((el) => {
           return (
             <MotionAspect
@@ -29,8 +45,10 @@ export default function SectionTwo() {
             >
               <VStack
                 w="100%"
+                textAlign={"center"}
+                px="10px"
                 borderRadius={"10px"}
-                boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}
+                boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
               >
                 <Icon as={el.icon} />
                 <Text fontWeight={"semibold"} fontSize={"xl"}>

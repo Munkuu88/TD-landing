@@ -1,6 +1,10 @@
 import { Flex, VStack, Text, Image } from "@chakra-ui/react";
+import { useLanguage } from "../context/language";
+import { Section3 } from "../texts/section-3";
 
 export default function SectionThree() {
+  const { language, setLanguage } = useLanguage();
+
   return (
     <Flex display={["block", "block", "block", "flex", "flex"]}>
       <Image w={["100%", "100%", "100%", "50%", "50%"]} />
@@ -10,14 +14,9 @@ export default function SectionThree() {
         pl={"40px"}
       >
         <Text fontSize={"3xl"} fontWeight={"bold"}>
-          Title is here
+          {Section3[language].title}
         </Text>
-        <Text fontSize={"lg"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          ultricies erat dignissim, faucibus lorem et, feugiat justo. Fusce at
-          luctus urna, sed fringilla ligula. Pellentesque elit ipsum, ornare sit
-          amet porttitor ac, ultricies eget libero.
-        </Text>
+        <Text fontSize={"lg"}>{Section3[language].desc}</Text>
       </VStack>
     </Flex>
   );
