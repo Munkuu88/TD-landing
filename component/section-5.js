@@ -22,6 +22,24 @@ export default function SectionFive() {
     arrows: true,
     autoplay: true,
     speed: 2000,
+    arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+        },
+      },
+    ],
   };
 
   return (
@@ -39,7 +57,7 @@ export default function SectionFive() {
           return (
             <Box key={el.title} p="20px">
               <Flex
-                boxSize={"250px"}
+                boxSize={["230px", "250px"]}
                 alignItems={"center"}
                 justifyContent={"center"}
                 boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}

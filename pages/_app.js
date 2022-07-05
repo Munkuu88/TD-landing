@@ -23,7 +23,12 @@ function MyApp({ Component, pageProps }) {
         <Box w="100% " h="71px" />
         <Header />
         <Flex justifyContent={"center"} py="80px">
-          <VStack w={["1200px"]} alignItems={"unset"} spacing={"160px"}>
+          <VStack
+            w={["95%", "95%", "90%", "70%", "70%"]}
+            maxW="1200px"
+            alignItems={"unset"}
+            spacing={"160px"}
+          >
             <Component {...pageProps} />
           </VStack>
         </Flex>
