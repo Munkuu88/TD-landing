@@ -4,6 +4,7 @@ import SectionTwo from "../component/section-2";
 import SectionThree from "../component/section-3";
 import SectionFour from "../component/section-4";
 import SectionFive from "../component/section-5";
+import SectionSix from "../component/section-6";
 import { useState } from "react";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <SectionThree />
       <SectionFour />
       <SectionFive />
+      <SectionSix />
     </>
   );
 }

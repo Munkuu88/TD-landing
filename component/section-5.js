@@ -1,4 +1,4 @@
-import { VStack, Text, Box, Flex } from "@chakra-ui/react";
+import { VStack, Text, Box, Flex, AspectRatio } from "@chakra-ui/react";
 import Slider from "react-slick";
 
 const Items = [
@@ -16,28 +16,56 @@ export default function SectionFive() {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 4,
+    slidesToShow: 3,
     speed: 500,
     dots: true,
     arrows: true,
+    autoplay: true,
+    speed: 2000,
+    arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+        },
+      },
+    ],
   };
 
   return (
     <Box h="40vh">
-      <Text></Text>
+      <Text
+        fontWeight={"semibold"}
+        fontSize={"xl"}
+        w="100%"
+        textAlign={"center"}
+      >
+        Title
+      </Text>
       <Slider {...settings}>
         {Items.map((el) => {
           return (
             <Box key={el.title} p="20px">
-              <Flex
-                boxSize={"250px"}
+              <AspectRatio
                 alignItems={"center"}
                 justifyContent={"center"}
                 boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
               >
-                <Text>{el.title}</Text>
-                <Text>{el.text}</Text>
-              </Flex>
+                <Flex>
+                  <Text>{el.title}</Text>
+                  <Text>{el.text}</Text>
+                </Flex>
+              </AspectRatio>
             </Box>
           );
         })}
