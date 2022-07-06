@@ -140,7 +140,7 @@ const DrawerMenu = ({ isOpen, onClose, Sections }) => {
           <VStack alignItems={"unset"} spacing={"20px"}>
             {Sections.map((el) => {
               return (
-                <a href={`#${el.text}`}>
+                <a href={`#${el.text}`} key={el.link}>
                   <Text onClick={onClose}>{el.text}</Text>
                 </a>
               );
