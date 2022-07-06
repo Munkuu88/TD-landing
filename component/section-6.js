@@ -31,12 +31,15 @@ export default function SectionSix() {
           />
           <VStack
             spacing={["20px", "30px"]}
-            pl={["0px", "40px"]}
             w={["100%", "100%", "100%", "50%", "50%"]}
-            h="100%"
             alignItems={"center"}
-            justifyContent="center"
             flexDir={"column"}
+            justifyContent={"center"}
+            py="40px"
+            px={["20px"]}
+            bg={"rgba(255, 255, 255, 0.5)"}
+            backdropFilter={"blur(10px)"}
+            borderRadius={"20px"}
           >
             <Text fontSize={"xl"} fontWeight={"bold"}>
               {Section6[language].title}

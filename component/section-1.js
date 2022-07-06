@@ -6,7 +6,15 @@ export default function SectionOne() {
   const { language, setLanguage } = useLanguage();
   return (
     <Flex display={["block", "block", "block", "flex", "flex"]}>
-      <VStack alignItems={"unset"} w={["100%", "100%", "100%", "50%", "50%"]}>
+      <VStack
+        alignItems={"unset"}
+        justifyContent={"center"}
+        px={["0px", "20px"]}
+        w={["100%", "100%", "100%", "50%", "50%"]}
+        bg={"rgba(255, 255, 255, 0.5)"}
+        backdropFilter={"blur(10px)"}
+        borderRadius={"20px"}
+      >
         <Text
           id="1"
           as="section"

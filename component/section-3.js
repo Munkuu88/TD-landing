@@ -16,6 +16,11 @@ export default function SectionThree() {
         alignItems={"unset"}
         w={["100%", "100%", "100%", "50%", "50%"]}
         pl={["0px", "40px"]}
+        justifyContent={"center"}
+        px={["20px"]}
+        bg={"rgba(255, 255, 255, 0.5)"}
+        backdropFilter={"blur(10px)"}
+        borderRadius={"20px"}
       >
         <Text
           fontSize={["xl", "3xl"]}
