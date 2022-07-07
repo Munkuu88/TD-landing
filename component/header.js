@@ -63,11 +63,13 @@ export default function Header() {
           justifyContent={"space-between"}
           zIndex={2}
         >
-          <Image
-            cursor={"pointer"}
-            h="30px"
-            src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
-          />
+          <a href="/">
+            <Image
+              cursor={"pointer"}
+              h="30px"
+              src="https://media.discordapp.net/attachments/910331361179619370/993345940071133204/TD_logo_1.png"
+            />
+          </a>
           <HStack spacing={"20px"} fontSize={"sm"} fontWeight={"bold"}>
             {Sections.map((el) => {
               return (
