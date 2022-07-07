@@ -22,10 +22,10 @@ import { useLanguage } from "../context/language";
 import { languages } from "../context/language";
 
 const Sections = [
-  { text: "1", link: "1" },
-  { text: "2", link: "2" },
-  { text: "3", link: "3" },
-  { text: "4", link: "4" },
+  { text: "Home", link: "1" },
+  { text: "About Us", link: "2" },
+  { text: "Our Products", link: "3" },
+  { text: "Career", link: "4" },
 ];
 
 export default function Header() {

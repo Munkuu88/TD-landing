@@ -8,7 +8,7 @@ import { LanguageContextProvider } from "../context/language";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <link
           rel="stylesheet"
           type="text/css"
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-      </Head>
+      </Head> */}
       <ChakraProvider>
         <LanguageContextProvider>
           <Box w="100% " h={["55px", "71px"]} />

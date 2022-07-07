@@ -32,11 +32,11 @@ export default function Footer() {
   return (
     <Flex justifyContent={"center"} py="50px" borderTop={"1px solid #dbdbdb"}>
       <VStack w="70%" maxW="1300px" alignItems={"unset"}>
-        <SimpleGrid columns={[2, 4]} pb="50px">
+        {/* <SimpleGrid columns={[2, 4]} pb="50px">
           {Items.map((el) => {
             return <Item key={el.title} data={el} />;
           })}
-        </SimpleGrid>
+        </SimpleGrid> */}
         <Flex
           justifyContent={["none", "space-between"]}
           alignItems={["center", "none"]}
